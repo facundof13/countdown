@@ -1,0 +1,16 @@
+.time {
+  display:block;
+  justify-content: center;
+}
+
+p {
+  color: #428BF7;
+}
+
+body {
+  background: #35373A;
+}
+
+#timeLeft {
+  color: #428BF7;
+}

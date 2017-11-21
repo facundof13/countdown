@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,20 +12,20 @@
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
 	<script src="sketch.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<style>
-
-</style>
 
 <body>
 	<div class="time">
 		<p>Enter the amount of minutes to countdown: </p>
 		<input id=numMinutes type="text">
-		<button id="submitMins"  onclick="getTime();"></button>
+		<span id="inline">
+		<button id="submitMins"  onclick="getTime();">Start timer</button>
+		<button id="stopSound" onclick="stopSound();">Mute alarm</button>
+</span>
 		<p id="timeLeft">0</p>
 	</div>
-
 </body>
 
 
