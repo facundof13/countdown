@@ -1,6 +1,5 @@
 .time {
-  display:block;
-  justify-content: center;
+  text-align: center;
 }
 
 p {
@@ -9,6 +8,7 @@ p {
 
 body {
   background: #35373A;
+  font-size: 14px;
 }
 
 #timeLeft {
