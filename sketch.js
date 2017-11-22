@@ -40,13 +40,42 @@ function getTime() {
 
 function secondsToHms(d) {
   d = Number(d);
-  var h = Math.floor(d / 3600);
-  var m = Math.floor(d % 3600 / 60);
-  var s = Math.floor(d % 3600 % 60);
+  let h = Math.floor(d / 3600);
+  let m = Math.floor(d % 3600 / 60);
+  let s = Math.floor(d % 3600 % 60);
 
-  var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-  var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-  var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+  let hDisplay;
+  let mDisplay;
+  let sDisplay;
+
+  if (h > 0) {
+    if (h < 9) {
+      hDisplay = ("0" + h + ":");
+    }
+    hDisplay = h + ":";
+  } else {
+    hDisplay = "00:"
+  }
+  if (m > 0) {
+    if (m < 9) {
+      mDisplay = ("0" + m + ":");
+    }
+    mDisplay = m + ":";
+  } else {
+    mDisplay = "00:"
+  }
+
+  if (s > 0) {
+    if (s >= 10) {
+      sDisplay = s;
+    } else {
+      sDisplay = "0" + s;
+    }
+  } else {
+    sDisplay = "00";
+  }
+
+
   return hDisplay + mDisplay + sDisplay;
 }
 
