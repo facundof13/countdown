@@ -18,9 +18,9 @@ function draw() {
   let minsLeft = secondsToHms(ceil((startDate - currentDate) / 1000));
   timeLeft.innerHTML = minsLeft != "" ? minsLeft : 0;
   if (timeTicking) {
-    window.document.title = minsLeft != "" ? minsLeft : 0;
+    document.title = minsLeft != "" ? minsLeft : 0;
   } else {
-    window.document.title = "Countdown";
+    document.title = "Countdown";
   }
 
   if ((currentDate >= startDate) && timeTicking) {
